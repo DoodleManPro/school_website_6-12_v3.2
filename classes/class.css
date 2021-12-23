@@ -1,0 +1,472 @@
+/* Common styles, styles used throughout the website ------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mohave:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    background: #c59d5f;
+}
+
+
+/* Root Colors / Theme Colors */
+:root {
+    --main-color: antiquewhite;
+    --accent-color: #a55d33;
+    --white: #fff;
+    --accent-font-color: #c59d5f;
+    --black-font-color: #252525;
+    --white-board-color: #252525;
+}
+.gold {
+    color: var(--accent-font-color);
+}
+.black {
+    color: var(--black-font-color);
+}
+.white {
+    color: var(--white);
+}
+
+/* Loader CSS */
+.loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    z-index: 1000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    transition: .5s;
+}
+.loader {
+    width: 25px;
+    height: 25px;
+    border: 2px solid #fff;
+    animation: animate 2.5s linear infinite;
+}
+@keyframes animate {
+    0% {
+        transform: rotate(0);
+    } 100% {
+        transform: rotate(360deg);
+    }
+}
+
+.container1 {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    overflow-x: hidden;
+ }
+ 
+.wall {
+    height: 100vh;
+    width: 100%;
+    background: #D8C198;
+}  
+.wall2 {
+    height: 100vh;
+    width: 100%;;
+    background: url(./images/class_bg/Wall.svg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: .4s;
+}
+.table1 {
+    position: absolute;
+    bottom: -7px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 60%;
+}
+.white-board {
+    margin-top: -70px;
+    width: 60%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 0px;
+}
+.white-board img {
+    width: 100%;
+}
+.wb-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    font-family: 'Montserrat';
+}
+.grade {
+    color: var(--white-board-color);
+    float: right;
+    font-weight: 900;
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+.left-content {
+    width: 60%;
+    height: 20%;
+    float: left;
+}
+.date {
+    color: var(--white-board-color);
+    font-weight: 900;
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+.time-table-selector {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.time-table-selector h1 {
+    font-size: 15px;
+    font-weight: 900;
+    color: var(--white-board-color);
+    letter-spacing: 1px;
+    margin-right: 15px;
+}
+.time-table-heading {
+    border: 1px solid #252525;
+    border-radius: 10px;
+    outline: none;
+    background: #f1f1f1;
+    font-family: 'Montserrat';
+    cursor: pointer;
+    font-size: 15px;
+    color: var(--white-board-color);
+    font-weight: 900;
+    margin-left: -10px;
+    margin-top: -5px;
+    font-size: 10px;
+}
+.planner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 0px;
+}
+.planner h1 {
+    font-size: 15px;
+    font-weight: 900;
+    color: var(--white-board-color);
+    letter-spacing: 1px;
+    margin-right: 15px;
+    margin-top: 10px;
+}
+.planner a {  
+    border: 1px solid #252525;
+    border-radius: 10px;
+    outline: none;
+    background: #f1f1f1;
+    font-family: 'Montserrat';
+    cursor: pointer;
+    font-size: 10px;
+    color: var(--white-board-color);
+    font-weight: 900;
+    margin-left: -10px;
+    padding: 2px 5px;
+    text-decoration: none;
+    transition: .2s;
+    margin-top: 3px;
+}
+.planner a:hover {
+    background: #252525;
+    color: #fff;
+}
+.heading {
+    color: var(--white-board-color);
+    width: 100%;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.heading h1:nth-child(1) {
+    font-size: 25px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-bottom: -10px;
+}
+.heading h1:nth-child(2) {
+    font-size: 60px;
+    font-weight: 900;
+}
+
+
+
+
+
+
+/* Wall 3 */
+.wall3 {
+    height: 100vh;
+}
+.teacher-list-wrapper {
+    width: 75%;
+    height: 70vh;
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow-y: scroll;
+}
+
+
+
+/* Teacher List AKA Wall 3 */
+.teacher-row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.teacher-card {
+    width: 30%;
+    min-height: 20vh;
+    background: var(--main-color);
+    border-radius: 10px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.email {
+    width: 50%;
+    height: 20%;
+    background: var(--accent-font-color);
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.teacher-sub {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    text-align: center;
+    margin-top: -5px;
+    letter-spacing: 1px;
+}
+.email:hover {
+    background: #9c7c4c;
+}
+.carousel-control-next {
+    margin-right: -30px;
+}
+.carousel-control-prev {
+    margin-left: -30px;
+}
+.teacher-name {
+    font-family: 'Montserrat Black', sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
+}
+.email {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat';
+    font-weight: 600;
+}
+
+
+.common-heading {
+    text-align: center;
+    overflow: hidden;
+}
+.common-heading h1 {
+    font-size: 80px;
+    font-family: 'Lobster';
+    letter-spacing: 3px;
+    font-weight: 300;
+}
+.common-heading h3 {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: 0.4rem;
+    font-weight: 900;
+    margin-right: -.5rem;
+    margin-top: -20px;
+}
+
+.activity-heading {
+    font-family: 'Montserrat Black', sans-serif;
+    letter-spacing: 2px;
+    margin-top: 30px;
+    margin-bottom: -10px;
+}
+
+
+/* Video Row */
+.video-row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.video-card {
+    width: 31.5%;
+    min-height: 20%;
+    background: var(--main-color);
+    border-radius: 10px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.video-card iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.template-msg {
+    font-family: 'Calibri';
+}
+.wall-heading {
+    margin: initial;
+    padding: initial;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    text-align: center;
+    margin: 0px 0px 0px 50px;
+    font-size: 50px;
+}
+.bottom-space {
+    width: 100%;
+    height: 10vh;
+}
+.credit-msg {
+    font-family: 'Poppins';
+    margin: initial;
+    padding: initial;
+    font-size: 10px;
+    text-align: center;
+}
+.credit-msg span {
+    color: var(--accent-font-color);
+}
+.md {
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+/* Scroll Bar */
+::-webkit-scrollbar {
+    background: var(--main-color);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--accent-font-color);
+    margin: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--main-color);
+}
+
+
+
+
+.welcome-msg {
+    font-size: initial;
+}
+
+
+
+
+
+
+@media (max-width: 720px) {
+    .carousel-control-next, .carousel-control-prev {
+        margin: initial;
+    }
+    .white-board img{
+        display: none;
+    }
+    .white-board {
+        top: 0%;
+        width: 100%;
+        height: 100vh;
+    }
+    .heading{
+        width: 90%;
+        top: 60%;
+    }
+    .table1 {
+        display: none;
+    }
+    .left-content {
+        width: 100%;
+        height: 80px;
+    }
+    .grade {
+        float: left;
+    }
+    .planner {
+        margin-top: 0;
+    }
+    .teacher-row {
+        flex-direction: column;
+        margin-bottom: initial;
+    }
+    .teacher-card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+    .video-row {
+        flex-direction: column;
+        margin-bottom: initial;
+    }
+    .video-card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
